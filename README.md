@@ -49,7 +49,7 @@ An enhanced assistant that handles both weather and traffic information queries.
 - Context-aware tool routing
 - Mock data implementation for rapid prototyping
 
-**Example:** *"How's the traffic in Liverpool and what's the weather like?"*
+**Example:** *"How's the traffic in Dublin and what's the weather like?"*
 
 ---
 
