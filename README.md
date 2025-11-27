@@ -11,11 +11,11 @@ This repository contains **5 distinct agent implementations** demonstrating vari
 ```
 Agents_Series_1/
 ├── .env                    # Shared API configuration
-├── Agent_1.1/              # Basic weather assistant
-├── Agent_1.2/              # Multi-tool agent (weather + traffic)
-├── Agent_1.3/              # Google Search & Maps integration
-├── Agent_1.4/              # Multi-agent translation system
-├── Agent_1.5/              # Sequential agent workflow
+├── Agent_1/              # Basic weather assistant
+├── Agent_2/              # Multi-tool agent (weather + traffic)
+├── Agent_3/              # Google Search & Maps integration
+├── Agent_4/              # Multi-agent translation system
+├── Agent_5/              # Sequential agent workflow
 └── README.md               # This file
 ```
 
@@ -23,7 +23,7 @@ Agents_Series_1/
 
 ## 🚀 Projects
 
-### [Agent 1.1: Weather Assistant](./Agent_1.1)
+### [Agent 1: Weather Assistant](./Agent_1)
 **Type**: Tool-Augmented Agent  
 **Model**: Gemini 2.0 Flash
 
@@ -38,7 +38,7 @@ A weather information assistant demonstrating fundamental tool integration with 
 
 ---
 
-### [Agent 1.2: Multi-Tool Assistant](./Agent_1.2)
+### [Agent 2: Multi-Tool Assistant](./Agent_2)
 **Type**: Multi-Tool Agent  
 **Model**: Gemini 2.0 Flash
 
@@ -53,7 +53,7 @@ An enhanced assistant that handles both weather and traffic information queries.
 
 ---
 
-### [Agent 1.3: Social Event Planner](./Agent_1.3)
+### [Agent 3: Social Event Planner](./Agent_3)
 **Type**: External API Integration  
 **Model**: Gemini 2.0 Flash Experimental
 
@@ -70,7 +70,7 @@ A sophisticated event discovery and travel planning agent leveraging Google Sear
 
 ---
 
-### [Agent 1.4: Multi-Agent Translation System](./Agent_1.4)
+### [Agent 4: Multi-Agent Translation System](./Agent_4)
 **Type**: Hierarchical Multi-Agent System  
 **Model**: Gemini 2.0 Flash
 
@@ -94,7 +94,7 @@ root_agent (Coordinator)
 
 ---
 
-### [Agent 1.5: Airbnb Trends Analyzer](./Agent_1.5)
+### [Agent 5: Airbnb Trends Analyzer](./Agent_5)
 **Type**: Sequential Multi-Agent System  
 **Model**: Gemini 2.5 Pro
 
@@ -122,30 +122,30 @@ host_agent (SequentialAgent)
 
 ### Architecture Patterns Implemented
 
-#### 1. **Single Agent with Tools** (Agents 1.1, 1.2, 1.3)
+#### 1. **Single Agent with Tools** (Agents 1, 2, 3)
 - Direct tool integration for focused functionality
 - Efficient for single-domain applications
 - Clean, maintainable architecture
 
-#### 2. **Hierarchical Multi-Agent** (Agent 1.4)
+#### 2. **Hierarchical Multi-Agent** (Agent 4)
 - Root coordinator with specialized sub-agents
 - Request routing based on domain expertise
 - Scalable for multi-domain applications
 
-#### 3. **Sequential Multi-Agent** (Agent 1.5)
+#### 3. **Sequential Multi-Agent** (Agent 5)
 - Pipeline-based workflow with context passing
 - Stage-specific specialization
 - Ideal for complex, multi-step processes
 
 ### Design Decisions
 
-**Tool Design Philosophy** (Agent 1.4)
+**Tool Design Philosophy** (Agent 4)
 - Hybrid approach: Local caching + API fallback
 - 60-80% reduction in API calls for common queries
 - Sub-millisecond response for cached items
 - Graceful degradation when APIs unavailable
 
-**Sequential Workflow** (Agent 1.5)
+**Sequential Workflow** (Agent 5)
 - Context preservation between pipeline stages
 - Structured JSON output with validation
 - Specialized agents for discovery vs. analysis
@@ -155,7 +155,7 @@ host_agent (SequentialAgent)
 
 ## 🧠 Model Selection Rationale
 
-### Gemini 2.0 Flash (Agents 1.1 - 1.4)
+### Gemini 2.0 Flash (Agents 1 - 4)
 
 **Why Flash for most agents:**
 - **Speed**: Optimized for low-latency responses, ideal for interactive applications
@@ -169,7 +169,7 @@ host_agent (SequentialAgent)
 - Hierarchical agent coordination
 - API integration with external services
 
-### Gemini 2.5 Pro (Agent 1.5)
+### Gemini 2.5 Pro (Agent 5)
 
 **Why Pro for the Airbnb analyzer:**
 - **Advanced Reasoning**: Complex web research requiring deeper analysis
@@ -258,18 +258,18 @@ Access web interface at: `http://127.0.0.1:8000`
 
 | Project | Architecture Type | Key Innovation |
 |---------|------------------|----------------|
-| Agent 1.1 | Single Agent | Tool integration fundamentals |
-| Agent 1.2 | Single Agent | Multi-tool selection |
-| Agent 1.3 | Single Agent | External API integration |
-| Agent 1.4 | Hierarchical Multi-Agent | Intelligent delegation + caching |
-| Agent 1.5 | Sequential Multi-Agent | Pipeline workflow + structured output |
+| Agent 1 | Single Agent | Tool integration fundamentals |
+| Agent 2 | Single Agent | Multi-tool selection |
+| Agent 3 | Single Agent | External API integration |
+| Agent 4 | Hierarchical Multi-Agent | Intelligent delegation + caching |
+| Agent 5 | Sequential Multi-Agent | Pipeline workflow + structured output |
 
 ---
 
 ## 🎯 Key Features
 
 ### Performance Optimization
-- **Local caching** for frequently accessed data (Agent 1.4)
+- **Local caching** for frequently accessed data (Agent 4)
 - **Hybrid tool design** reducing API calls by 60-80%
 - **Structured output** with validation for reliability
 
@@ -305,11 +305,11 @@ Access web interface at: `http://127.0.0.1:8000`
 ## 🚀 Potential Extensions
 
 ### Agent Enhancements
-- **Agent 1.1**: Integration with real-time weather APIs (OpenWeatherMap, WeatherAPI)
-- **Agent 1.2**: Public transit data and ride-sharing integration
-- **Agent 1.3**: Calendar sync, ticket purchasing, and group coordination
-- **Agent 1.4**: Expanded language support, translation memory, context-aware translations
-- **Agent 1.5**: Multi-city analysis, sentiment analysis, price trend visualization
+- **Agent 1**: Integration with real-time weather APIs (OpenWeatherMap, WeatherAPI)
+- **Agent 2**: Public transit data and ride-sharing integration
+- **Agent 3**: Calendar sync, ticket purchasing, and group coordination
+- **Agent 4**: Expanded language support, translation memory, context-aware translations
+- **Agent 5**: Multi-city analysis, sentiment analysis, price trend visualization
 
 ### System-Wide Improvements
 - Persistent storage for agent interactions
